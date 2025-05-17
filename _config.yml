@@ -83,7 +83,7 @@ topbar_color                              : "#000000"
 topbar_transparency                       : 0.05
 topbar_title_color                        : "#ffffff"
 
-cover_image                               : assets/headerimage.png
+cover_image                               : /assets/headerimage.png
 cover_overlay_color                       : "#1a1a1a"
 cover_overlay_transparency                : 0.7
 
