@@ -1,23 +1,17 @@
 .imageWrapper {					// Sets the background image in the header area
 	height: 714px;
-	background: 
-		linear-gradient(
-		rgba($image-overlay-color, $image-overlay-transparency), 
-		rgba($image-overlay-color, $image-overlay-transparency)
-		   ),
-		
-		url($header-image);
-
+	background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top;
 	border-radius: 0px 0px 40px 40px;
-
 }
 
 .headerBackground {
 	height: 115px;
-	background-color: rgba($header-color, $header-transparency);
+	background: linear-gradient(90deg, rgba(17, 24, 39, 0.95) 0%, rgba(31, 41, 55, 0.95) 100%);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
 }
 
 @media only screen and (max-width: 768px) {
@@ -162,11 +156,8 @@ header {
 	display: flex;
 	width: 100%;
 	align-items: center;
-	justify-content: flex-end;
-
+	justify-content: center;
 	height: 115px;
-	//margin-left: 15px;
-
 	white-space: nowrap;
 	overflow-x: auto;
 	overflow-y: hidden;
@@ -195,40 +186,34 @@ nav > ul {
 	color: #fff;
 	display: flex;
 	list-style-type: none;
-
+	justify-content: center;
+	width: 100%;
 }
 
 nav > ul li {
-	padding-left: 30px;
-}
-
-@media only screen and (max-width: 768px) {
-
-	nav > ul li {
-		padding-left: 20px;
-	}
-
+	padding: 0 30px;
 }
 
 nav > ul li:first-child {
-	padding-left: 0px;
-	padding-left: 15px;
+	padding-left: 30px;
 }
 
 nav > ul li:last-child {
-	padding-right: 15px;
+	padding-right: 30px;
 }
 
 nav > ul li a:link,
 nav > ul li a:visited {
 	text-decoration: none;
-	color: rgba($header-title-color, 0.6);
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 1.1rem;
+	font-weight: 500;
 }
 
 nav > ul li a:hover,
 nav > ul li a:active {
 	text-decoration: none;
-	color: rgba($header-title-color, 1);
+	color: rgba(255, 255, 255, 1);
 }
 
 nav > ul li a {
@@ -317,6 +302,8 @@ nav > ul li a {
 	letter-spacing: -1px;
 	margin-bottom: 0.5rem;
 	line-height: 1.2;
+	color: #ffffff;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .appPrice {
@@ -362,6 +349,7 @@ nav > ul li a {
 	font-weight: 400;
 	max-width: 800px;
 	margin: 2rem auto;
+	color: #e5e7eb;
 }
 
 @media only screen and (max-width: 992px) {
@@ -528,17 +516,18 @@ nav > ul li a {
 	padding-left: 15px;
 	padding-right: 15px;
 	width: calc(100%/3);
-	background: rgba(255, 255, 255, 0.8);
+	background: rgba(31, 41, 55, 0.8);
 	border-radius: 16px;
 	padding: 2rem;
 	transition: all 0.3s ease;
-	border: 1px solid rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
 	
 	&:hover {
 		transform: translateY(-5px);
-		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+		background: rgba(31, 41, 55, 0.9);
 	}
 }
 
