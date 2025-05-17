@@ -1,5 +1,5 @@
 .imageWrapper {					// Sets the background image in the header area
-	height: 450px;
+	height: 1px;
 	background: linear-gradient(135deg, #111827 0%, #1f2937 50%, #111827 100%);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -35,6 +35,10 @@
 
 	.container {
 		grid-template-rows: 697px auto auto;
+	}
+	
+	.iphonePreview {
+		height: 697px;
 	}
 }
 
@@ -396,6 +400,7 @@ nav > ul li a {
 	background-size: 400px auto;
 	background-repeat: no-repeat;
 	margin-top: 68px;
+	height: 762px;
 }
 
 .iphoneScreen {
