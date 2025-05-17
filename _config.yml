@@ -86,7 +86,7 @@ topbar_title_color                        : "#ffffff"
 # Removing cover_image and updating colors for dark theme
 body_background_color                     : "#111827"
 cover_overlay_color                       : "#111827"
-cover_overlay_transparency                : 1
+#cover_overlay_transparency                : 1
 
 device_color                              : black
 
