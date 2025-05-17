@@ -80,33 +80,32 @@ features                                  :
 
 # Theme Settings
 topbar_color                              : "#000000"
-topbar_transparency                       : 0.05
+topbar_transparency                       : 0
 topbar_title_color                        : "#ffffff"
 
-cover_image                               : /assets/headerimage.png
-cover_overlay_color                       : "#1a1a1a"
-cover_overlay_transparency                : 0.7
+# Removing cover_image and updating colors for dark theme
+body_background_color                     : "#111827"
+cover_overlay_color                       : "#111827"
+cover_overlay_transparency                : 1
 
 device_color                              : black
 
-body_background_color                     : "#ffffff"
-
-link_color                                : "#2563eb"
+link_color                                : "#60a5fa"
 
 app_title_color                           : "#ffffff"
 app_price_color                           : "#ffffff"
 app_description_color                     : "#ffffff"
 
-feature_title_color                       : "#111827"
-feature_text_color                        : "#4b5563"
+feature_title_color                       : "#ffffff"
+feature_text_color                        : "#e5e7eb"
 
-feature_icons_foreground_color            : "#2563eb"
-feature_icons_background_color            : "#e5e7eb"
+feature_icons_foreground_color            : "#60a5fa"
+feature_icons_background_color            : "#1f2937"
 
 social_icons_foreground_color             : "#4b5563"
 social_icons_background_color             : "#f3f4f6"
 
-footer_text_color                         : "#4b5563"
+footer_text_color                         : "#e5e7eb"
 
 
 
