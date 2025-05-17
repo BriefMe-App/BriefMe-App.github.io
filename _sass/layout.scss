@@ -277,16 +277,18 @@ nav > ul li a {
 	align-items: start;
 	justify-content: center;
 	margin-left: 30px;
+	max-width: 400px;
 }
 
 .appName {
-	font-size: 4.2rem;
+	font-size: 3.8rem;
 	font-weight: 700;
 	letter-spacing: -1px;
 	margin-bottom: 0.5rem;
 	line-height: 1.2;
 	color: #ffffff;
 	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	white-space: nowrap;
 }
 
 .appPrice {
@@ -492,7 +494,7 @@ nav > ul li a {
 
 .feature {
 	display: flex;
-	padding: 3rem;
+	padding: 2.5rem;
 	width: 100%;
 	background: rgba(31, 41, 55, 0.8);
 	border-radius: 24px;
@@ -500,7 +502,7 @@ nav > ul li a {
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
-	min-height: 300px;
+	min-height: 200px;
 	
 	&:hover {
 		transform: translateY(-5px);
@@ -535,7 +537,7 @@ nav > ul li a {
 	}
 
 	.feature {
-		min-height: 250px;
+		min-height: 180px;
 		padding: 2rem;
 	}
 
@@ -545,6 +547,15 @@ nav > ul li a {
 
 	.featureText > p {
 		font-size: 1.4rem;
+	}
+
+	.appNamePriceContainer {
+		max-width: 100%;
+	}
+	
+	.appName {
+		font-size: 3.2rem;
+		white-space: normal;
 	}
 }
 
