@@ -1,25 +1,10 @@
 .imageWrapper {					// Sets the background image in the header area
 	height: 714px;
-	background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+	background: linear-gradient(135deg, #111827 0%, #1f2937 50%, #111827 100%);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top;
 	border-radius: 0px 0px 40px 40px;
-}
-
-.headerBackground {
-	height: 115px;
-	background: linear-gradient(90deg, rgba(17, 24, 39, 0.95) 0%, rgba(31, 41, 55, 0.95) 100%);
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
-}
-
-@media only screen and (max-width: 768px) {
-
-	.headerBackground {
-		height: 80px;
-	}
-
 }
 
 .subPageHeaderBackground {
