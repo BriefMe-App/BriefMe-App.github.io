@@ -1,5 +1,5 @@
 .imageWrapper {					// Sets the background image in the header area
-	height: 714px;
+	height: 450px;
 	background: linear-gradient(135deg, #111827 0%, #1f2937 50%, #111827 100%);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -18,7 +18,7 @@
 	padding-left: 15px;
 	padding-right: 15px;
 	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: 876px auto auto;
+	grid-template-rows: 762px auto auto;
 	grid-column-gap: 30px;
 	grid-template-areas: 
 		"p p p p p i i i i i i i"
@@ -34,7 +34,7 @@
 @media only screen and (max-width: 768px) {
 
 	.container {
-		grid-template-rows: 811px auto auto;
+		grid-template-rows: 697px auto auto;
 	}
 }
 
@@ -712,6 +712,8 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-size: 2.2rem;
+	background: linear-gradient(135deg, #111827 0%, #1f2937 50%, #111827 100%);
+	background-attachment: fixed;
 }
 
 // Animations
