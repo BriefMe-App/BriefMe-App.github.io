@@ -376,6 +376,8 @@ nav > ul li a {
 	filter: $drop-shadow;
 	user-select: text !important;
 	pointer-events: auto !important;
+	position: relative !important;
+	z-index: 9999 !important;
 }
 
 @media only screen and (max-width: 992px) {
@@ -424,6 +426,11 @@ nav > ul li a {
 	background-repeat: no-repeat;
 	margin-top: 68px;
 	height: 800px;
+}
+
+.iphoneScreen, .videoContainer {
+	pointer-events: none !important;
+	z-index: 0 !important;
 }
 
 .iphoneScreen {
