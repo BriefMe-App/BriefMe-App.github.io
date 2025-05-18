@@ -748,7 +748,18 @@ footer {
 } 
 
 .hidden {
-	display: none;
+	display: none !important;
+	pointer-events: none !important;
+}
+
+.featureText > p {
+	margin-left: -40px;
+}
+
+@media only screen and (max-width: 992px) {
+	.featureText > p {
+		margin-left: -28px;
+	}
 }
 
 // Base styles
