@@ -18,11 +18,10 @@
 	padding-left: 15px;
 	padding-right: 15px;
 	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: 800px auto auto;
+	grid-template-rows: 800px auto;
 	grid-column-gap: 30px;
 	grid-template-areas: 
 		"p p p p p i i i i i i i"
-		"c c c c c c c c c c c c"
 		"f f f f f f f f f f f f";
 }
 
@@ -43,16 +42,19 @@
 }
 
 @media only screen and (max-width: 992px) {
-
 	.container {
-		grid-column-gap: 0px;
-		grid-template-columns: 1;
-		grid-template-rows: auto auto auto;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto;
 		grid-template-areas: 
 			"i i i i i i i i i i i i"
 			"p p p p p p p p p p p p"
-			"c c c c c c c c c c c c"
 			"f f f f f f f f f f f f";
+	}
+	
+	.features {
+		grid-area: f;
+		padding-top: 0;
+		margin-top: 40px;
 	}
 }
 
@@ -282,13 +284,27 @@ nav > ul li a {
 	justify-content: center;
 	margin-left: 30px;
 	max-width: 400px;
+	background: rgba(31, 41, 55, 0.4);
+	border-radius: 16px;
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+	padding: 2rem;
+	transition: all 0.3s ease;
+	
+	&:hover {
+		background: rgba(31, 41, 55, 0.6);
+		transform: translateY(-2px);
+		box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+	}
 }
 
 .appName {
 	font-size: 3.8rem;
 	font-weight: 700;
 	letter-spacing: -1px;
-	margin-bottom: 0.5rem;
+	margin-bottom: 1rem;
 	line-height: 1.2;
 	color: #ffffff;
 	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -323,67 +339,49 @@ nav > ul li a {
 } 
 
 .appDescriptionContainer {
-	font-size: 2.5rem;
-	font-weight: normal;
 	width: 100%;
-	align-items: flex-start;
-	margin-top: 25px;
+	margin-top: 0;
 	flex: 0 1 auto;
-	line-height: 1.5;
 }
 
 .appDescription {
-	font-size: 2.2rem;
+	font-size: 1.8rem;
 	line-height: 1.5;
 	font-weight: 400;
-	max-width: 800px;
-	margin: 0 auto;
 	color: #e5e7eb;
-	position: relative;
-	padding: 1.5rem 2rem;
-	background: rgba(31, 41, 55, 0.4);
-	border-radius: 16px;
-	backdrop-filter: blur(8px);
-	-webkit-backdrop-filter: blur(8px);
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
-	transform: translateY(0);
-	transition: all 0.3s ease;
-	cursor: default;
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	box-shadow: none;
+	backdrop-filter: none;
+	transform: none;
 	
 	&:hover {
-		background: rgba(31, 41, 55, 0.6);
-		transform: translateY(-2px);
-		box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+		background: none;
+		transform: none;
+		box-shadow: none;
 	}
 	
 	&::before {
-		content: '';
-		position: absolute;
-		top: -2px;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 40px;
-		height: 4px;
-		background: rgba(96, 165, 250, 0.5);
-		border-radius: 2px;
-		transition: width 0.3s ease;
-	}
-	
-	&:hover::before {
-		width: 60px;
+		display: none;
 	}
 }
 
 @media only screen and (max-width: 992px) {
-	.appDescription {
+	.appNamePriceContainer {
+		align-items: center;
 		text-align: center;
-		font-size: 2rem;
-		padding: 1.2rem 1.5rem;
+		padding: 1.5rem;
 	}
 	
-	.appDescriptionContainer {
-		margin-top: 20px;
+	.appName {
+		font-size: 3.2rem;
+		white-space: normal;
+	}
+	
+	.appDescription {
+		font-size: 1.6rem;
 	}
 }
 
@@ -530,10 +528,13 @@ nav > ul li a {
 	grid-area: c;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: 3rem;
-	margin-top: 120px;
-	padding: 0 2rem;
+	gap: 2rem;
+	margin-top: 0;
+	padding: 0;
 	margin-bottom: 40px;
+	grid-area: i;
+	align-content: start;
+	padding-top: 120px;
 }
 
 .feature {
