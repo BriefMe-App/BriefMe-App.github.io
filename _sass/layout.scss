@@ -258,7 +258,6 @@ nav > ul li a {
 	flex-wrap: wrap;
 	padding-top: 120px;
 	align-content: flex-start;
-	pointer-events: none !important;
 	background: none !important;
 	border: none !important;
 }
@@ -532,6 +531,7 @@ nav > ul li a {
 	margin-bottom: 40px;
 	align-content: start;
 	padding-top: 380px;
+	pointer-events: none !important;
 }
 
 .feature {
