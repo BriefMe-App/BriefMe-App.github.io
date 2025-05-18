@@ -1,13 +1,12 @@
-.imageWrapper {					// Sets the background image in the header area
-	height: 600px;
-	background: transparent;
+.imageWrapper {
+	height: 0;
+	background: transparent !important;
+	border: none !important;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top;
 	border-radius: 0px 0px 40px 40px;
 	pointer-events: auto !important;
-	background: rgba(255,0,0,0.2) !important;
-	border: 2px solid red !important;
 }
 
 .subPageHeaderBackground {
@@ -26,9 +25,9 @@
 	grid-template-areas: 
 		"p p p p p i i i i i i i"
 		"f f f f f f f f f f f f";
-	pointer-events: auto !important;
-	background: rgba(0,255,0,0.2) !important;
-	border: 2px solid green !important;
+	pointer-events: none !important;
+	background: none !important;
+	border: none !important;
 }
 
 .subPageContainer {
@@ -259,9 +258,9 @@ nav > ul li a {
 	flex-wrap: wrap;
 	padding-top: 120px;
 	align-content: flex-start;
-	pointer-events: auto !important;
-	background: rgba(0,0,255,0.2) !important;
-	border: 2px solid blue !important;
+	pointer-events: none !important;
+	background: none !important;
+	border: none !important;
 }
 
 @media only screen and (max-width: 992px) {
@@ -380,7 +379,6 @@ nav > ul li a {
 	display: inline-block;
 	margin-top: 3rem;
 	filter: $drop-shadow;
-	user-select: text !important;
 	pointer-events: auto !important;
 	position: relative !important;
 	z-index: 9999 !important;
