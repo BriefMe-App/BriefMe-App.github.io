@@ -6,6 +6,8 @@
 	background-position: top;
 	border-radius: 0px 0px 40px 40px;
 	pointer-events: auto !important;
+	background: rgba(255,0,0,0.2) !important;
+	border: 2px solid red !important;
 }
 
 .subPageHeaderBackground {
@@ -25,6 +27,8 @@
 		"p p p p p i i i i i i i"
 		"f f f f f f f f f f f f";
 	pointer-events: auto !important;
+	background: rgba(0,255,0,0.2) !important;
+	border: 2px solid green !important;
 }
 
 .subPageContainer {
@@ -256,6 +260,8 @@ nav > ul li a {
 	padding-top: 120px;
 	align-content: flex-start;
 	pointer-events: auto !important;
+	background: rgba(0,0,255,0.2) !important;
+	border: 2px solid blue !important;
 }
 
 @media only screen and (max-width: 992px) {
