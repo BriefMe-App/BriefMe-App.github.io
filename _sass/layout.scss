@@ -36,13 +36,163 @@
 }
 
 @media only screen and (max-width: 768px) {
-
 	.container {
-		grid-template-rows: 735px auto auto;
+		grid-template-rows: auto auto;
+		padding: 0 15px;
+		gap: 20px;
 	}
 	
 	.iphonePreview {
-		height: 735px;
+		height: auto;
+		min-height: 600px;
+		margin-top: 20px;
+		padding-bottom: 40px;
+	}
+
+	.appInfo {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.appNamePriceContainer {
+		margin: 20px 0;
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.appName {
+		font-size: 2.8rem;
+		margin: 15px 0;
+		white-space: normal;
+		word-wrap: break-word;
+	}
+
+	.appDescription {
+		font-size: 1.6rem;
+		padding: 0 15px;
+		margin: 15px 0;
+	}
+
+	.downloadButtonsContainer {
+		margin-top: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 15px;
+	}
+
+	.playStore, .appStore {
+		margin: 0;
+		height: 60px;
+	}
+
+	.features {
+		grid-template-columns: 1fr;
+		gap: 15px;
+		padding-top: 20px;
+		margin-top: 20px;
+	}
+
+	.feature {
+		min-height: auto;
+		padding: 20px;
+		margin: 0;
+	}
+
+	.featureText {
+		margin-left: 15px;
+		
+		> h3 {
+			font-size: 1.8rem;
+			margin-bottom: 10px;
+		}
+		
+		> p {
+			font-size: 1.4rem;
+			margin-left: 0;
+			margin-top: 8px;
+		}
+	}
+
+	.featureIcon {
+		width: 32px;
+		height: 32px;
+	}
+
+	.scroll {
+		height: auto;
+		padding: 15px 0;
+		margin-top: 0;
+		justify-content: flex-start;
+	}
+
+	nav > ul {
+		padding: 0;
+		justify-content: flex-start;
+	}
+
+	nav > ul li {
+		padding: 0 15px;
+	}
+
+	nav > ul li:first-child {
+		padding-left: 15px;
+	}
+
+	nav > ul li:last-child {
+		padding-right: 15px;
+	}
+
+	.footer {
+		margin-top: 40px;
+		padding: 30px 0;
+	}
+
+	.footerText {
+		padding: 30px 15px;
+		font-size: 1.4rem;
+	}
+
+	.footerIcons {
+		padding-bottom: 30px;
+	}
+
+	.footerLinks {
+		padding-bottom: 30px;
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.container {
+		padding: 0 10px;
+	}
+
+	.appName {
+		font-size: 2.4rem;
+	}
+
+	.appDescription {
+		font-size: 1.4rem;
+	}
+
+	.feature {
+		padding: 15px;
+	}
+
+	.featureText > h3 {
+		font-size: 1.6rem;
+	}
+
+	.featureText > p {
+		font-size: 1.3rem;
+	}
+
+	.iphonePreview {
+		min-height: 500px;
 	}
 }
 
@@ -531,7 +681,7 @@ nav > ul li a {
 	margin-bottom: 40px;
 	align-content: start;
 	padding-top: 380px;
-	/* pointer-events: none !important; */
+	pointer-events: none !important;
 }
 
 .feature {
