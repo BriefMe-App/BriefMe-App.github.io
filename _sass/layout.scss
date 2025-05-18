@@ -525,21 +525,20 @@ nav > ul li a {
 // Feature List
 
 .features {
-	grid-area: c;
+	grid-area: i;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 2rem;
 	margin-top: 0;
 	padding: 0;
 	margin-bottom: 40px;
-	grid-area: i;
 	align-content: start;
-	padding-top: 120px;
+	padding-top: 280px;
 }
 
 .feature {
 	display: flex;
-	padding: 2.5rem;
+	padding: 2rem;
 	width: 100%;
 	background: rgba(31, 41, 55, 0.8);
 	border-radius: 24px;
@@ -547,7 +546,8 @@ nav > ul li a {
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
-	min-height: 200px;
+	min-height: 180px;
+	align-items: flex-start;
 	
 	&:hover {
 		transform: translateY(-5px);
@@ -558,49 +558,42 @@ nav > ul li a {
 
 .featureText {
 	margin-left: 24px;
-}
-
-.featureText > h3 {
-	font-size: 2.4rem;
-	font-weight: 600;
-	margin-bottom: 1.5rem;
-	color: $feature-title-color;
-}
-
-.featureText > p {
-	font-size: 1.6rem;
-	line-height: 1.6;
-	color: $feature-text-color;
+	flex: 1;
+	
+	> h3 {
+		font-size: 2.4rem;
+		font-weight: 600;
+		margin-bottom: 1rem;
+		color: $feature-title-color;
+	}
+	
+	> p {
+		font-size: 1.6rem;
+		line-height: 1.5;
+		color: $feature-text-color;
+		margin: 0;
+	}
 }
 
 @media only screen and (max-width: 992px) {
-
 	.features {
-		grid-template-columns: 1fr;
-		gap: 2rem;
-		padding: 0 1rem;
-	}
-
-	.feature {
-		min-height: 180px;
-		padding: 2rem;
-	}
-
-	.featureText > h3 {
-		font-size: 2rem;
-	}
-
-	.featureText > p {
-		font-size: 1.4rem;
-	}
-
-	.appNamePriceContainer {
-		max-width: 100%;
+		grid-area: f;
+		padding-top: 0;
+		margin-top: 40px;
 	}
 	
-	.appName {
-		font-size: 3.2rem;
-		white-space: normal;
+	.feature {
+		min-height: 160px;
+		padding: 1.8rem;
+	}
+	
+	.featureText > h3 {
+		font-size: 2rem;
+		margin-bottom: 0.8rem;
+	}
+	
+	.featureText > p {
+		font-size: 1.4rem;
 	}
 }
 
