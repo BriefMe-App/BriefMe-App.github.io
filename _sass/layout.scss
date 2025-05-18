@@ -299,6 +299,8 @@ nav > ul li a {
 	color: #ffffff;
 	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	white-space: nowrap;
+	user-select: text !important;
+	pointer-events: auto !important;
 }
 
 .appPrice {
@@ -342,6 +344,8 @@ nav > ul li a {
 	margin: 0;
 	padding: 0;
 	opacity: 0.9;
+	user-select: text !important;
+	pointer-events: auto !important;
 }
 
 @media only screen and (max-width: 992px) {
@@ -364,6 +368,8 @@ nav > ul li a {
 	display: inline-block;
 	margin-top: 3rem;
 	filter: $drop-shadow;
+	user-select: text !important;
+	pointer-events: auto !important;
 }
 
 @media only screen and (max-width: 992px) {
@@ -569,7 +575,8 @@ nav > ul li a {
 		color: $feature-text-color;
 		margin: 0;
 		padding-left: 0;
-		margin-left: -18px;
+		margin-left: -60px;
+		margin-top: 1.2rem;
 	}
 }
 
@@ -600,7 +607,8 @@ nav > ul li a {
 		
 		> p {
 			font-size: 1.4rem;
-			margin-left: -12px;
+			margin-left: -40px;
+			margin-top: 1rem;
 		}
 	}
 }
@@ -750,16 +758,6 @@ footer {
 .hidden {
 	display: none !important;
 	pointer-events: none !important;
-}
-
-.featureText > p {
-	margin-left: -40px;
-}
-
-@media only screen and (max-width: 992px) {
-	.featureText > p {
-		margin-left: -28px;
-	}
 }
 
 // Base styles
