@@ -36,133 +36,157 @@
 }
 
 @media only screen and (max-width: 768px) {
-	.container {
-		grid-template-rows: auto auto;
-		padding: 0 15px;
-		gap: 20px;
+	body {
+		overflow-x: hidden;
 	}
-	
-	.iphonePreview {
-		height: auto;
-		min-height: 600px;
-		margin-top: 20px;
-		padding-bottom: 40px;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		padding: 0 8px;
+		gap: 0;
+		width: 100vw;
+		max-width: 100vw;
+		min-width: 0;
 	}
 
 	.appInfo {
-		padding-top: 30px;
-		padding-bottom: 30px;
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
+		padding-top: 24px;
+		padding-bottom: 16px;
+		z-index: 2;
+		position: relative;
+	}
+
+	.appIconShadow, .appIconLarge {
+		margin: 0 auto;
+		display: block;
+		z-index: 2;
+		position: relative;
 	}
 
 	.appNamePriceContainer {
-		margin: 20px 0;
+		margin: 18px 0 0 0;
 		width: 100%;
 		max-width: 100%;
+		align-items: center;
+		text-align: center;
+		z-index: 2;
+		position: relative;
 	}
 
 	.appName {
-		font-size: 2.8rem;
-		margin: 15px 0;
+		font-size: 2.2rem;
+		margin: 10px 0 0 0;
 		white-space: normal;
-		word-wrap: break-word;
+		word-break: break-word;
+		z-index: 2;
+		position: relative;
+	}
+
+	.appDescriptionContainer {
+		margin-top: 10px;
+		z-index: 2;
+		position: relative;
 	}
 
 	.appDescription {
-		font-size: 1.6rem;
-		padding: 0 15px;
-		margin: 15px 0;
+		font-size: 1.3rem;
+		padding: 0 8px;
+		margin: 0;
+		z-index: 2;
+		position: relative;
 	}
 
 	.downloadButtonsContainer {
-		margin-top: 20px;
+		margin-top: 18px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 15px;
+		gap: 10px;
+		width: 100%;
+		z-index: 2;
+		position: relative;
 	}
 
 	.playStore, .appStore {
 		margin: 0;
-		height: 60px;
+		height: 48px;
+		width: 90vw;
+		max-width: 320px;
 	}
 
 	.features {
-		grid-template-columns: 1fr;
-		gap: 15px;
-		padding-top: 20px;
-		margin-top: 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		padding-top: 10px;
+		margin-top: 10px;
+		width: 100%;
+		z-index: 1;
+		position: relative;
 	}
 
 	.feature {
-		min-height: auto;
-		padding: 20px;
-		margin: 0;
+		width: 100%;
+		min-width: 0;
+		max-width: 100vw;
+		box-sizing: border-box;
+		padding: 14px 8px;
+		margin: 0 auto;
+		min-height: unset;
+		z-index: 1;
+		position: relative;
 	}
 
 	.featureText {
-		margin-left: 15px;
-		
+		margin-left: 10px;
 		> h3 {
-			font-size: 1.8rem;
-			margin-bottom: 10px;
+			font-size: 1.2rem;
+			margin-bottom: 6px;
 		}
-		
 		> p {
-			font-size: 1.4rem;
+			font-size: 1.1rem;
 			margin-left: 0;
-			margin-top: 8px;
+			margin-top: 4px;
 		}
 	}
 
 	.featureIcon {
-		width: 32px;
-		height: 32px;
+		width: 28px;
+		height: 28px;
 	}
 
-	.scroll {
+	.iphonePreview {
+		order: 2;
+		min-height: 320px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		background-size: 180px auto;
+		background-position: center top;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		width: 100vw;
+		max-width: 100vw;
+		overflow-x: auto;
+		z-index: 0;
+		position: relative;
+	}
+
+	.iphoneScreen, .videoContainer {
+		width: 160px;
 		height: auto;
-		padding: 15px 0;
-		margin-top: 0;
-		justify-content: flex-start;
+		margin: 0 auto;
+		margin-top: 10px;
 	}
 
-	nav > ul {
-		padding: 0;
-		justify-content: flex-start;
-	}
-
-	nav > ul li {
-		padding: 0 15px;
-	}
-
-	nav > ul li:first-child {
-		padding-left: 15px;
-	}
-
-	nav > ul li:last-child {
-		padding-right: 15px;
-	}
-
-	.footer {
-		margin-top: 40px;
-		padding: 30px 0;
-	}
-
-	.footerText {
-		padding: 30px 15px;
-		font-size: 1.4rem;
-	}
-
-	.footerIcons {
-		padding-bottom: 30px;
-	}
-
-	.footerLinks {
-		padding-bottom: 30px;
-		width: 100%;
+	.videoContainer > video {
+		width: 160px;
+		height: auto;
 	}
 }
 
