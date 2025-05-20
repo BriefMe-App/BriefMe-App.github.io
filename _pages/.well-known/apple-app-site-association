@@ -1,0 +1,27 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "P6SL2Z4HXQ.com.briefme.app"
+        ],
+        "components": [
+          {
+            "/": "*",
+            "comment": "Matches all routes"
+          }
+        ]
+      }
+    ]
+  },
+  "activitycontinuation": {
+    "apps": [
+      "P6SL2Z4HXQ.com.briefme.app"
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "P6SL2Z4HXQ.com.briefme.app"
+    ]
+  }
+}
