@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<script>
+  // Check if the URL matches our universal link pattern
+  const path = window.location.pathname;
+  if (path.startsWith("/play/")) {
+    // Store the original URL in localStorage in case the app needs it later
+    localStorage.setItem("briefme_deep_link", window.location.href);
+  }
+
+  // Redirect to home page
+  window.location.href = "/";
+</script>
+
+<noscript>
+  <meta http-equiv="refresh" content="0;url=/" />
+</noscript>
+
+<div style="text-align: center; padding: 50px">
+  <h1>Redirecting...</h1>
+  <p>If you are not redirected automatically, <a href="/">click here</a>.</p>
+</div>
