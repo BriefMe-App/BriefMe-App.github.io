@@ -5,17 +5,34 @@ layout: default
 <script>
   // Check if the URL matches our universal link pattern
   const path = window.location.pathname;
+  console.log("Current path:", path);
+
   if (path.startsWith("/play/")) {
+    console.log("Play path detected");
     // Store the original URL in localStorage in case the app needs it later
     localStorage.setItem("briefme_deep_link", window.location.href);
-    // Redirect to App Store for /play/ paths
+    console.log("Stored deep link in localStorage");
 
-    console.log("Redirecting to App Store");
-    window.location.href =
-      "https://apps.apple.com/us/app/briefme-ai-podcast-player/id6740944674?uo=4";
+    // Add meta refresh tag for backup
+    const meta = document.createElement("meta");
+    meta.httpEquiv = "refresh";
+    meta.content =
+      "0;url=https://apps.apple.com/us/app/briefme-ai-podcast-player/id6740944674?uo=4";
+    document.head.appendChild(meta);
+    console.log("Added meta refresh tag");
+
+    // Try the JavaScript redirect
+    console.log("Attempting JavaScript redirect to App Store");
+    try {
+      window.location.replace(
+        "https://apps.apple.com/us/app/briefme-ai-podcast-player/id6740944674?uo=4"
+      );
+    } catch (e) {
+      console.error("Redirect failed:", e);
+    }
   } else {
-    // Redirect to home page for all other 404s
-    window.location.href = "/";
+    console.log("Non-play path, redirecting to home");
+    window.location.replace("/");
   }
 </script>
 
@@ -25,5 +42,11 @@ layout: default
 
 <div style="text-align: center; padding: 50px">
   <h1>Redirecting...</h1>
-  <p>If you are not redirected automatically, <a href="/">click here</a>.</p>
+  <p>
+    If you are not redirected automatically,
+    <a
+      href="https://apps.apple.com/us/app/briefme-ai-podcast-player/id6740944674?uo=4"
+      >click here to download the app</a
+    >.
+  </p>
 </div>
