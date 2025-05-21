@@ -8,11 +8,15 @@ layout: default
   if (path.startsWith("/play/")) {
     // Store the original URL in localStorage in case the app needs it later
     localStorage.setItem("briefme_deep_link", window.location.href);
-  }
+    // Redirect to App Store for /play/ paths
 
-  // Redirect to home page
-  window.location.href =
-    "https://apps.apple.com/us/app/briefme-ai-podcast-player/id6740944674?uo=4";
+    console.log("Redirecting to App Store");
+    window.location.href =
+      "https://apps.apple.com/us/app/briefme-ai-podcast-player/id6740944674?uo=4";
+  } else {
+    // Redirect to home page for all other 404s
+    window.location.href = "/";
+  }
 </script>
 
 <noscript>
